@@ -1,3 +1,8 @@
 Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
 
+1. The "All traffic" rule in WebAppSG created major network vulnerabilities.
+2. The c3-app-InstanceRole should not allow to access secret-recipes bucket.
+
 Bonus - provide recommendations on how to remediate the vulnerabilities.
+1. Delete "All traffic" rule in WebAppSG
+2. Update c3-app-InstanceRole to only allow access to free-recipes bucket

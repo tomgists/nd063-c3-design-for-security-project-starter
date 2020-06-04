@@ -2,4 +2,10 @@
 
 # Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
 
+1. WebAppSG security group SSh rule should narrow the Source IP to certain IPs instead of accepting request from everywhere. Delete "All traffic" inbound rule.
+2. Set up AWS WAF to create a Rate-based rule to defend against brute-force attack.
+3. Set up a Bastion Host, change SSh rule from WebAppSG security group to only allow Bastion Host access. 
+
 # Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
+
+Delete the Role c3-app-InstanceRole-xxxxx that were assigned to both instances immediately, or modify the policy to only allow S3 access to the free-recipes bucket.

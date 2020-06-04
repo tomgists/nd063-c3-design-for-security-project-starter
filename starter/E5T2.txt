@@ -1,13 +1,16 @@
 # Identify tools that will allow you to do the following:
 
 ## Scan infrastructure as code templates
-
+CloudFormation Template Scanner
 ### Example vulnerability
+Access key in the template
 
 ##Scan AMI’s or containers for OS vulnerabilities
-
+Amazon Inspector
 ### Example vulnerability
+OS security patches are not up-to-date
 
 ##Scan an AWS environment for cloud configuration vulnerabilities
-
+AWS Config
 ### Example vulnerability
+Password length is too short

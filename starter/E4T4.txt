@@ -1,8 +1,13 @@
 
 # What additional architectural change can be made to reduce the internet facing attack surface of the web application instance.
+1. Add WAF
+2. Use Bastion Host to be the only SSH endpoint to the web server
 
 # Assuming the IAM permissions for the S3 bucket are still insecure, would creating VPC private endpoints for S3 prevent the unauthorized access to the secrets bucket.
+No. A VPC endpoint just is just for accessing S3 without going through the Internet. 
 
 # Will applying default encryption setting to the s3 buckets encrypt the data that already exists?
+No, only to the new data
 
 # What would happen if the original cloud formation templates are applied to this environment.
+No effect, it won't overwrite the change.
